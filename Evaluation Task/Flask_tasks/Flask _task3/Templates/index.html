@@ -1,0 +1,29 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Table Generator</title>
+</head>
+<body>
+    <h1>Number Table Generator</h1>
+    <form method="POST" action="/table">
+        <label for="number">Enter a number:</label>
+        <input type="text" name="number" id="number" required>
+        <input type="submit" value="Generate Table">
+    </form>
+
+    {% if table %}
+        <h2>Table of {{ number }}</h2>
+        <table border="1">
+            {% for row in table %}
+            <tr>
+                {% for cell in row %}
+                <td>{{ cell }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+</body>
+</html>
+
