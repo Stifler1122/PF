@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ML Model Load Balancer</title>
+</head>
+<body>
+    <h1>ML Model Load Balancer</h1>
+    <form action="/get_loaded_models" method="GET">
+        <input type="submit" value="Process">
+    </form>
+    <form action="/process_request" method="POST">
+        <label for="model">Model:</label>
+        <select name="model" required>
+            <option value="face_detection">Face Detection</option>
+            <option value="car_detection">Car Detection</option>
+            <option value="shoe_detection">Shoe Detection</option>
+            <option value="cloth_detection">Cloth Detection</option>
+            <option value="signal_detection">Signal Detection</option>
+            <option value="water_level_detection">Water Level Detection</option>
+            <option value="missile_detection">Missile Detection</option>
+        </select>
+        <input type="submit" value="Process">
+    </form>
+</body>
+</html>
